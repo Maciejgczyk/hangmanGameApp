@@ -1,0 +1,20 @@
+<p class="center">
+  Level {{ level() }}
+</p>
+
+
+<div >
+  <p class="center">{{ hiddenSelectedWord() }}</p>
+  <p class="center">
+    Incorrect letters: {{ incorrectLetters() }} / {{ maxIncorrectLetters() }}
+  </p>
+  <p>
+    Selected letters:
+    @for (selectedLetter of selectedLetters(); track selectedLetter) {
+      <span [ngClass]="{'green': isLetterCorrect(selectedLetter), 'red': !isLetterCorrect(selectedLetter)}">
+      {{ selectedLetter }}
+    </span>
+    }
+  </p>
+
+</div>

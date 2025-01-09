@@ -1,0 +1,17 @@
+<div class="hangman-wrapper">
+  <app-info
+    [incorrectLetters]="incorrectLetters()"
+    [selectedLetters]="selectedLetters()"
+    [word]="word()"
+    [level]="level()"
+    [allLevels]="allLevels"
+    [maxIncorrectLetters]="maxIncorrectLetters"
+  />
+
+  <app-keyboard
+    [word]="word()"
+    [selectedLetters]="selectedLetters()"
+    (letterSelected)="onLetterSelected($event)"
+  />
+</div>
+

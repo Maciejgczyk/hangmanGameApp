@@ -1,0 +1,11 @@
+  @for (letter of letters; track letter) {
+    <button
+      mat-flat-button
+      color="secondary"
+      [disabled]="selectedLetters().has(letter)"
+      (click)="onLetterSelected(letter)"
+    >
+      {{ letter }}
+    </button>
+  }
+

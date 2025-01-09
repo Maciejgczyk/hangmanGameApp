@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.hangman-wrapper {
+  width: 100%;
+  max-width: 670px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
